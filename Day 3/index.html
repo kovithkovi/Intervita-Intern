@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        header {
+            margin: 20px 0;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            text-align: center;
+            color: #333;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            /* Increased gap for more spacing between images */
+            width: 90%;
+            max-width: 1200px;
+            margin: 10px auto;
+        }
+
+        .photo {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .photo img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .photo:hover img {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Photo Gallery</h1>
+    </header>
+    <section class="gallery">
+        <div class="photo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAB3swxMdcD-QniL2Ss2PLf4w8Mj2o3YxGffaHdR3uIQ&s"
+                alt="Description of image 1">
+        </div>
+        <div class="photo">
+            <img src="https://www.livemint.com/lm-img/img/2023/12/16/600x338/PTI12-16-2023-000109B-0_1702716217793_1702716238765.jpg"
+                alt="Description of image 2">
+        </div>
+        <div class="photo">
+            <img src="https://www.livemint.com/lm-img/img/2023/10/16/600x338/CRICKET-ICC-MENS-WC-2023-IND-PAK-ODI-257_1697284761809_1697472641860.jpg"
+                alt="Description of image 3">
+        </div>
+        <div class="photo">
+            <img src="https://images.firstpost.com/uploads/2024/04/AP24119466773015-1-2024-04-03e3ef16ab9f5d61d25e96c33bad69e6-1200x675.jpg?im=Resize,width=720,aspect=fit,type=normal"
+                alt="Description of image 4">
+        </div>
+        <div class="photo">
+            <img src="https://static.theprint.in/wp-content/uploads/2023/02/cricket-team-1.jpg"
+                alt="Description of image 5">
+        </div>
+        <div class="photo">
+            <img src="https://kauveryhospital.com/blog/wp-content/uploads/2023/10/cricket-injuries.jpg"
+                alt="Description of image 6">
+        </div>
+        <div class="photo">
+            <img src="https://cdn.britannica.com/47/148847-050-C4FB5341/Cricket-bat-ball.jpg"
+                alt="Description of image 6">
+        </div>
+        <div class="photo">
+            <img src="https://y20india.in/wp-content/uploads/2024/04/rcb-squad-ipl-2024-sportstiger-1702966270231-original.jpg"
+                alt="Description of image 6">
+        </div>
+        <div class="photo">
+            <img src="https://c.ndtvimg.com/2024-05/5ksi6pio_virat-kohli-bcci_625x300_22_May_24.jpg?im=FeatureCrop,algorithm=dnn,width=806,height=605"
+                alt="Description of image 6">
+        </div>
+    </section>
+</body>
+
+</html>
